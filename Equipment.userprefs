@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/CharacterMgr.cs">
+    <Files>
+      <File FileName="Assets/Script/Main.cs" Line="164" Column="22" />
+      <File FileName="Assets/Script/CombineSkinnedMgr.cs" Line="5" Column="15" />
+      <File FileName="Assets/Script/CharacterController.cs" Line="19" Column="47" />
+      <File FileName="Assets/Script/CharacterMgr.cs" Line="21" Column="45" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
