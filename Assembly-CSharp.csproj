@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{132C5299-9034-B442-A226-4F968755F6FC}</ProjectGuid>
+    <ProjectGuid>{C02F4022-DDF7-88F2-76FF-48286DF83EC7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -49,6 +49,9 @@
      <Compile Include="Assets\Script\CharacterMgr.cs" />
      <Compile Include="Assets\Script\CombineSkinnedMgr.cs" />
      <Compile Include="Assets\Script\Main.cs" />
+     <Compile Include="Assets\Script\Test.cs" />
+     <None Include="Assets\Shaders\charactor\OutlinePass.shader" />
+     <None Include="Assets\Shaders\charactor\Cloth-AlphaTest.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Software/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

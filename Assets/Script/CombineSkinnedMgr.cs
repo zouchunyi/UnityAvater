@@ -63,7 +63,7 @@ public class UCombineSkinnedMgr {
         // merge materials
 		if (combine)
 		{
-			newMaterial = new Material (Shader.Find ("Mobile/Diffuse"));
+			newMaterial = new Material (Shader.Find ("Otome/Charactor/Cloth-AlphaTest"));
 			oldUV = new List<Vector2[]>();
 			// merge the texture
 			List<Texture2D> Textures = new List<Texture2D>();
