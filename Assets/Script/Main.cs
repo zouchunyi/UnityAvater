@@ -45,7 +45,7 @@ public class Main : MonoBehaviour {
 	private const int DEFAULT_CHEST = 0;
 	private const int DEFAULT_HAND = 0;
 	private const int DEFAULT_FEET = 1;
-	private const bool DEFAULT_COMBINEMATERIAL = true;
+	private const bool DEFAULT_COMBINEMATERIAL = false;
 	
     /// <summary>
     /// Use this for GUI display.
@@ -61,6 +61,7 @@ public class Main : MonoBehaviour {
     /// The avatar in the scene.
     /// </summary>
 	private UCharacterController character = null;
+	private UCombineSkinnedMgr combineSkinnedMgr = new UCombineSkinnedMgr();
 
 	// Use this for initialization
 	void Start () {
@@ -83,6 +84,18 @@ public class Main : MonoBehaviour {
 			combine);
 		character.Instance.transform.position = new Vector3 (0, -1, -5);
 		character.Instance.transform.eulerAngles = new Vector3 (0, 180, 0);
+
+		GameObject chest = GameObject.Instantiate (Resources.Load("Prefab/ch_pc_hou_004_shen")) as GameObject;
+		GameObject foot = GameObject.Instantiate (Resources.Load("Prefab/ch_pc_hou_004_jiao")) as GameObject;
+		SkinnedMeshRenderer[] meshes = new SkinnedMeshRenderer[1];
+		meshes [0] = character.Instance.GetComponentInChildren<SkinnedMeshRenderer> ();
+	//	meshes [1] = chest.GetComponentInChildren<SkinnedMeshRenderer> ();
+	//	meshes [2] = foot.GetComponentInChildren<SkinnedMeshRenderer> ();
+		combineSkinnedMgr.CombineObject (character.Instance, meshes, false);
+
+		GameObject.Destroy (chest.gameObject);
+		GameObject.Destroy (foot.gameObject);
+	//	GameObject.Destroy (meshes [0]);
 	}
 	
 	// Update is called once per frame

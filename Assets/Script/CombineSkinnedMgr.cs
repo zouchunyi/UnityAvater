@@ -36,12 +36,14 @@ public class UCombineSkinnedMgr {
 		for (int i = 0; i < meshes.Length; i ++)
 		{
 			SkinnedMeshRenderer smr = meshes[i];
-			materials.AddRange(smr.materials); // Collect materials
+			//materials.Add(smr.materials[1]); // Collect materials
 			// Collect meshes
 			for (int sub = 0; sub < smr.sharedMesh.subMeshCount; sub++)
 			{
+				materials.Add(smr.materials[sub]);
 				CombineInstance ci = new CombineInstance();
-				ci.mesh = smr.sharedMesh;
+				ci.mesh = sub == 0 ? smr.sharedMesh : new Mesh();
+	
 				ci.subMeshIndex = sub;
 				combineInstances.Add(ci);
 			}

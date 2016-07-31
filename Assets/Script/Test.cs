@@ -7,7 +7,13 @@ public class Test : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        skinnedMgr.CombineObject(this.gameObject, this.GetComponentsInChildren<SkinnedMeshRenderer>(), false);
+
+		SkinnedMeshRenderer[] meshes = this.GetComponentsInChildren<SkinnedMeshRenderer> ();
+		skinnedMgr.CombineObject(this.gameObject, meshes, false);
+		for (int i = 0; i < meshes.Length; i++) {
+
+			GameObject.Destroy (meshes [i]);
+		}
     }
 	
 	// Update is called once per frame

@@ -50,13 +50,14 @@ public class UCharacterController {
 		equipments [3] = feet;
 		
         // Create and collect other parts SkinnedMeshRednerer
-		SkinnedMeshRenderer[] meshes = new SkinnedMeshRenderer[4];
+		SkinnedMeshRenderer[] meshes = new SkinnedMeshRenderer[2];
 		GameObject[] objects = new GameObject[4];
 		for (int i = 0; i < equipments.Length; i++) {
 			
 			res = Resources.Load ("Prefab/" + equipments [i]);
 			objects[i] = GameObject.Instantiate (res) as GameObject;
-			meshes[i] = objects[i].GetComponentInChildren<SkinnedMeshRenderer> ();
+			if (i < 2)
+				meshes[i] = objects[i].GetComponentInChildren<SkinnedMeshRenderer> ();
 		}
 		
         // Combine meshes
